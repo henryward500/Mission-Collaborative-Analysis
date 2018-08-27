@@ -1,0 +1,1905 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20181.18.0706.1237                               -->
+<workbook original-version='18.1' source-build='2018.1.3 (20181.18.0706.1237)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Mission_Company_Industry_organized' inline='true' name='federated.1be1elb0eacnxm1a4eiu002hu4al' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Mission_Company_Industry_organized' name='textscan.00kbyfr1k5tup81gehune1chj97s'>
+            <connection class='textscan' directory='/Users/wardanderson/Desktop' filename='Mission_Company_Industry_organized.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.00kbyfr1k5tup81gehune1chj97s' name='Mission_Company_Industry_organized.csv' table='[Mission_Company_Industry_organized#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Company' ordinal='0' />
+            <column datatype='string' name='Name' ordinal='1' />
+            <column datatype='string' name='Industry' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Mission_Company_Industry_organized.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Company</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Company]</local-name>
+            <parent-name>[Mission_Company_Industry_organized.csv]</parent-name>
+            <remote-alias>Company</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Mission_Company_Industry_organized.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Industry]</local-name>
+            <parent-name>[Mission_Company_Industry_organized.csv]</parent-name>
+            <remote-alias>Industry</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Employer' datatype='string' name='[Company]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;DNR&quot;' value='*DNR' />
+          <alias key='&quot;DNS&quot;' value='*DNS' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[Industry]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;DNR&quot;' value='*DNR' />
+          <alias key='&quot;DNS&quot;' value='*DNS' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Company]' derivation='None' name='[none:Company:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Industry]' derivation='None' name='[none:Industry:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.536789' measure-ordering='alphabetic' measure-percentage='0.463211' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Company:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;AED&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Association for Financial Professionals&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;CE Solutions&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;DCPS&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Federal Bar Association&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Flying Dog Brewery&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;GWU&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;IIE&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Lisha relaxx spa&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;NADCP&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Pact&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SayYes Career&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;The Democracy Collaborative&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;UMD&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Washington DC Jewish Community Center&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AMS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Byrnes Solutions&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Connections Media&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Digital Evidence Group&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DNR&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ever Better&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;GeoConstructors&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;HSB&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Jillian Hubbard Consulting&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Merkle&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;NPR&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Prosperity Now&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;SYA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Total Wine &amp; More&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Vec&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;World Resources Institute&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Achievement Network&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Applied Predictive Technologies (APT)&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Capital City Public Charter School&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DC Government&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;FDA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Global Taiwan Institute&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Institute for Higher Education Policy&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Marriott International&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mobomo&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;National Geographic&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Orange Theory&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Quorum&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Thunderbird School of Global Management&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;TriKai Media&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Von Dier Career Cartography&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Young Bear Environmental Consulting&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Alexandria City Public Schools&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Bipartisan Policy Center&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Civil Rights Division, Department of Justice&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Department of State&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Enterprise&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;EPA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;for a good fit&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Healthy Directions&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;International Food Policy Research Institute&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;National Council for Behavioral Mental Health&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;PCORI&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Share care Health&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;The McCain Institute&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Urban Land Institute&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;William &amp; Mary&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Agency for the Cooperation of Energy Regulators&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Aveshka Inc&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Center for Political Accountability&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Deloitte&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;EDENS&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Folha de Sao Paulo&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Illustria&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Independent&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;LITTLE LIGHTS&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NARUC&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Pariveda Solutions&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SB Nation&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;The District Church&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;UN Foundation&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Weber Shandwick&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ACIE&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ASAE Business Services, Inc.&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Capterra&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DC Greens&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DOJ&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Freelance&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;GLT&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ICF&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Lab Recyclers, Inc&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Monumental Food&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Orbis Inc.&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Remine&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Atlantic&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Truth Initiative&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Vox.com&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Zignal Labs&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;ABC&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;American Red Cross&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Breakout Capital&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Compass Real Estate&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Designers&apos; Row&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Esteem Logic&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Gartner&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Howard University&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Jewish Federation of Greater Washington&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MedStar&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;NextGen Mafias&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Private Citizen&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Stimson Center&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Time Warner Cable&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;World Learning&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ankura&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Campaign for Tobacco-Free Kids&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;CoStar Group&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Discovery Inc.&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;DNS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;FAMM&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Grant Thornton&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Hungry Harvest&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Johns Hopkins&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MGTI&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Office of Congresswoman Barbara Lee&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Proven S&amp;C, Inc&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Teacher&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;TrackMaven&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Vericant&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Wright &amp; Talisman, PC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;American Geophysical Union&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Brailsford &amp; Dunlavey&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Coffey Consulting, LLC&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Dept of Veterans Affairs&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Erickson Living&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;FSI&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Hotel&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Iona Senior Services&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Mead Johnson Nutrition&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Pekko Beer&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Phacil&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;The Water Research Foundation&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;US Nuclear Regulatory Commission&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Work You Love Coach&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;World Bank Group&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ACOG&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Aspen Institute&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CARFAX&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;DC hammer and nail&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Dreams&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Georgetown University&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;GMMB&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ICF Olson&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Latham &amp; Watkins LLP&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;More Options Realty&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Organization of American State&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;RJ CONSULTANTS&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;The Coalition on Human Needs&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;TSN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Wakeface Artistry&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Amazon Conservation&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Blockchain4Humanity&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CMI&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Department of the Interior&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Entrepreneur&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Forum for Youth Investment&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;HHS&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;IBM&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;International Monetary Fund&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Mary&apos;s Center&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;National Democratic Institute&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Share Our Strength&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Menkiti Group&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Urban Outfitters&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;WineShop at Home&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;American Chemical Society&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Bloomberg&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CNHED&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Department of the Treasury&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;EP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;FRB&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;HLS&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;International Rescue Committee&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Maryland Senate and House&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;National Network to End Domestic Violence&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Pediatric Specialists of Virginia&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Siemens&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;The National Academies of Sciences, Engineers, and Medicine&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;US Department of Education&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Witness for Peace&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;522 Productions&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;American Institute of Architects&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Branson360&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;College Success Foundation&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Design Consortium LLC&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Escape Room&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Gallaudet University&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Howard Hughes Medical Institute Janelia Research Campus&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;IRI&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MedPAC&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;National Sikh Campaign&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Primr&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Souktel Digital Solutions&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;US SIF&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Worker Rights Consortium&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Abt Associates&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;American University&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;BUILD Metro DC&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Comscore&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;DHS&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Event360&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;General Assembly&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;HP&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Jhpiego&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MEG Consulting&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;NHPCO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Prometheus Publicity&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Strategic Bonds&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TNC&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;USDA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;AIR&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Baltz &amp; Company Inc.&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Cherokee Nation Business&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Democracy Collaborative&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Emar LLC&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Food &amp; water watch&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Harris Teeter&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;KIPP DC&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Lutheran Social Service of the National Capital Area&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NASCSP&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Patagonia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Skills Center - Khouribga Morocco&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;The Employment Law Group&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;USAID&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;WEConnect International&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ADEA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Associated General Contractors of America&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CCPCS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;DCI Group&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Dunnaway Associates&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;FEMA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;ICRW&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Life bridge health&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Morgan Borszcz Consulting, LLC&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Oxu Solutions&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;RM Harrison&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;The Advisory Board Company&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;The Conference Board&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;TY &amp; Assoc&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Washington DC Economic Partnership&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;APHA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Campbell Hill Aviation Group&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Council for Advancement &amp; Support of Education&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DLCC&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fannie Mae&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Girl Scouts Nation&apos;s Capital&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Hunt Alternatives&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kara Morillo Consulting&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Miami university&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;OnDeck&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PVA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Teamesteem&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;tradeinc&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Unemployed&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Verisk 3E&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;WWF&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;American College of Obstetricians and Gynecologists&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;BoardSource&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CoesterVMS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Department of Veterans Affairs&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Federal Energy Regulatory Commission&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Graduate Management Admission Council&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Hogan Lovells&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Interos&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;McLean Care Assisted Living&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;National Law Center on Homelessness and Poverty&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Pew Charitable Trusts&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Smithsonian&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Society of Thoracic Surgeons&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;US House&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Women in Film &amp; Video&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Al Mokha, P.B.C.&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Bentley Mills&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;City Blossoms&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Department of Health and Human Services&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;EAB&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Embassy of the Republic of Kosovo&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Food Frame of Mind&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Hattaway Communications&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;ManTech International Corp&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;National Association of Corporate Directors&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Pathfinder International&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Self-employed&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The Human Fund&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;United States Navy&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;WeddingWire&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Accenture&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;APPAM&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Camris&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CUF&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;FCPS&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Global Communities&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;ialcoaching.com&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Kimpton Hotels&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MOAA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Optum&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;PwC&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Self employed&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Tesla Government Inc&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Treadmill Productions&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Visajump&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Year Up&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Industry:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Unspecified&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Video Productions&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Environmental&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Law&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Non profit&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Cosmetic&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Recruiting&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Tech&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Car rental&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Think Tank&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Accounting&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Entrepreneurial&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Religious&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sports&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Trade association&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Energy&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Public Relations&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Career placement&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Education&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Fashion&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Court Reporting&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Real Estate&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Consulting&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Social Impact&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Communications&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Finance&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Construction&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Unemployed&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Customer Service&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Research&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Entertainment&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Retail&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Automation&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Media&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;DNS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Health care&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;DNR&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Insurance&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Marketing&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Transportation&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Contractor&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Hospitality&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Automotive&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Politics&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Architect&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Federal Govt&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Military&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Employer Bar'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Mission_Company_Industry_organized' name='federated.1be1elb0eacnxm1a4eiu002hu4al' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1be1elb0eacnxm1a4eiu002hu4al'>
+            <column caption='Employer' datatype='string' name='[Company]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;DNR&quot;' value='*DNR' />
+                <alias key='&quot;DNS&quot;' value='*DNS' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Company]' derivation='None' name='[none:Company:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;DNR&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;DNS&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;EAB&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;EPA&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;Freelance&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;Georgetown University&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;GWU&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;IBM&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;Independent&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;KIPP DC&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;National Geographic&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;National Network to End Domestic Violence&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;Self employed&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;Smithsonian&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;The Advisory Board Company&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;Unemployed&quot;' />
+              <groupfilter function='member' level='[none:Company:nk]' member='&quot;World Bank Group&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]' direction='DESC' using='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' />
+          <slices>
+            <column>[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='bold' />
+            <format attr='color' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='bold' />
+            <format attr='color' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]' />
+              <text column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]</rows>
+        <cols>[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Industry Bar'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Mission_Company_Industry_organized' name='federated.1be1elb0eacnxm1a4eiu002hu4al' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1be1elb0eacnxm1a4eiu002hu4al'>
+            <column datatype='string' name='[Industry]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;DNR&quot;' value='*DNR' />
+                <alias key='&quot;DNS&quot;' value='*DNS' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Industry]' derivation='None' name='[none:Industry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Career placement&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Consulting&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;DNR&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;DNS&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Education&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Entrepreneurial&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Federal Govt&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Finance&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Health care&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Hospitality&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Law&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Media&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Non profit&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Politics&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Public Relations&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Real Estate&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Research&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Retail&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Tech&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Think Tank&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Trade association&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Transportation&quot;' />
+              <groupfilter function='member' level='[none:Industry:nk]' member='&quot;Unemployed&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]' direction='DESC' using='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' />
+          <slices>
+            <column>[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-weight' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='bold' />
+            <format attr='color' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]' value='bold' />
+            <format attr='color' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]' value='#000000' />
+            <format attr='font-weight' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='bold' />
+            <format attr='color' field='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]' />
+              <text column='[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]</rows>
+        <cols>[federated.1be1elb0eacnxm1a4eiu002hu4al].[sum:Number of Records:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Employer Bar'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Company:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='Industry Bar'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1be1elb0eacnxm1a4eiu002hu4al].[none:Industry:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Employer Bar' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Industry Bar' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
