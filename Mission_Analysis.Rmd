@@ -1,0 +1,347 @@
+---
+title: "Mission Data 2nd"
+author: "Ward"
+date: "7/30/2018"
+output: html_document
+---
+
+---
+title: "Grant Mission Project"
+author: "Ward"
+date: "7/19/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Desktop/Mission_use files on desktop_4_GitHUB")
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(Hmisc)
+library(ggthemes)
+library(knitr)
+library(xtable)
+library(pander)
+library(car)
+library(tidyr)
+#reading in data
+report_1 <- read.csv("1.csv")
+report_2 <- read.csv("2.csv")
+report_3 <- read.csv("3.csv")
+report_4 <- read.csv("4.csv")
+report_5 <- read.csv("5.csv")
+report_6 <- read.csv("6.csv")
+report_7 <- read.csv("7.csv")
+report_8 <- read.csv("8.csv")
+report_9 <- read.csv("9.csv")
+report_10 <- read.csv("10.csv")
+report_11 <- read.csv("11.csv")
+report_12 <- read.csv("12.csv")
+report_13 <- read.csv("13.csv")
+report_14 <- read.csv("14.csv")
+```
+
+#only selecting 'Company', 'First Name', and 'Last Name' columns from datasets 
+```{r}
+company_2 <- report_2%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_3 <- report_3%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_4 <- report_4%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_5 <- report_5%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_6 <- report_6%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_7 <- report_7%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_11 <- report_11%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_12 <- report_12%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_13 <- report_13%>%
+  select(Company, First.Name, Last.Name)
+```
+
+```{r}
+company_14 <- report_14%>%
+  select(Company, First.Name, Last.Name)
+```
+
+#rbind all datasets that contain 'Company', 'First Name', and 'Last Name' columns into one dataset
+```{r}
+Company_all <- rbind(company_2, company_3, company_4, company_5, company_6, company_7, company_11, company_12, company_13, company_14)
+```
+
+```{r}
+Company_all <- Company_all%>%
+  rename("First_Name" = First.Name)%>%
+  rename("Last_Name" = Last.Name)
+```
+
+#combining 'First Name' and 'Last Name' columns to create new 'Name' column
+```{r}
+Company_all <- Company_all%>%
+  mutate(Name = paste(First_Name, Last_Name))
+```
+
+#deleting 'First Name' and 'Last Name' columns
+```{r}
+Company_all$First_Name <- NULL
+Company_all$Last_Name <- NULL
+```
+
+#removes duplicates
+```{r}
+Company_all <- Company_all[!duplicated(Company_all$Name),]
+```
+
+#exporting Company dataset to working directory
+```{r}
+write.csv(Company_all, "Company_list_UPDATED.csv")
+```
+
+
+#Selecting 'Job Title' and 'How.did.you.hear.about.us.' columns from datasets
+```{r}
+report_1 <- report_1%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.us.)
+```
+
+```{r}
+report_2 <- report_2%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_3 <- report_3%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_4 <- report_4%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_5 <- report_5%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_6 <- report_6%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_7 <- report_7%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_8 <- report_8%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.us.)
+```
+
+```{r}
+report_9 <- report_9%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.us.)
+```
+
+```{r}
+report_10 <- report_10%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.us.)
+```
+
+```{r}
+report_11 <- report_11%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_12 <- report_12%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_13 <- report_13%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_14 <- report_14%>%
+  select(First.Name, Last.Name, Job.Title, How.did.you.hear.about.this.event.)
+```
+
+#cleaning column names 
+```{r}
+report_1 <- report_1%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.us.)
+```
+
+```{r}
+report_2 <- report_2%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_3 <- report_3%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_4 <- report_4%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_5 <- report_5%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_6 <- report_6%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_7 <- report_7%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_8 <- report_8%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.us.)
+```
+
+```{r}
+report_9 <- report_9%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.us.)
+```
+
+```{r}
+report_10 <- report_10%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.us.)
+```
+
+```{r}
+report_11 <- report_11%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_12 <- report_12%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_13 <- report_13%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+```{r}
+report_14 <- report_14%>%
+  rename("Job_Title" = Job.Title)%>%
+  rename("How_did_you_hear" = How.did.you.hear.about.this.event.)
+```
+
+#rbinding report_1 through report_14 together (contains now )
+```{r}
+report_1_to_14 <- rbind(report_1, report_2, report_3, report_4, report_5, report_6, report_7, report_8, report_9, report_10, report_11, report_12, report_13, report_14)
+```
+
+```{r}
+report_1_to_14 <- report_1_to_14%>%
+  mutate(Name = paste(First.Name, Last.Name))
+```
+
+```{r}
+report_1_to_14$First.Name = NULL
+report_1_to_14$Last.Name = NULL
+```
+
+```{r}
+report_1_to_14<- report_1_to_14[!duplicated(report_1_to_14$Name),]
+```
+
+```{r}
+job_title <- report_1_to_14%>%
+  select(Job_Title,Name)
+```
+
+#exporting job_title dataset to working directory
+```{r}
+write.csv(job_title, "job_title_UPDATED.csv")
+```
+
+```{r}
+how_did_you_hear <- report_1_to_14%>%
+  select(How_did_you_hear, Name)
+```
+
+#getting rid of irrelevant symbols and words from survey data
+```{r}
+how_did_you_hear$How_did_you_hear <- gsub("na", " ", how_did_you_hear$How_did_you_hear)
+how_did_you_hear$How_did_you_hear <- gsub("yes", " ", how_did_you_hear$How_did_you_hear)
+how_did_you_hear$How_did_you_hear <- gsub("no", " ", how_did_you_hear$How_did_you_hear)
+how_did_you_hear$How_did_you_hear <- gsub("N/A", " ", how_did_you_hear$How_did_you_hear)
+how_did_you_hear$How_did_you_hear <- gsub("Yes", " ", how_did_you_hear$How_did_you_hear)
+how_did_you_hear$How_did_you_hear <- gsub("No", " ", how_did_you_hear$How_did_you_hear)
+```
+
+#filtering out unrelated rows
+```{r}
+how_did_you_hear <- how_did_you_hear%>%
+  filter(How_did_you_hear != "")
+```
+
+```{r}
+write.csv(how_did_you_hear, "how_did_you_hear_UPDATED.csv")
+```
+
+
+
+
+
+
+
+
+
